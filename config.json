@@ -1,6 +1,6 @@
 {
     "auth": {
-        "https://hub.docker.com/": {
+        "registry.hub.docker.com": {
             "username": "905447797",
             "password": "xcswswswws90",
             "insecure": true
@@ -11,6 +11,6 @@
         }
     },
     "images": {
-        "https://hub.docker.com/repository/docker/905447797/image-syncer": "latest"
+        "registry.hub.docker.com/905447797/image-syncer": ""
     }
 }
