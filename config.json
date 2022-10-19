@@ -1,0 +1,16 @@
+{
+    "auth": {
+        "harbor.myk8s.paas.com:32080": {
+            "username": "admin",
+            "password": "xxxxxxxxx",
+            "insecure": true
+        },
+        "registry.cn-beijing.aliyuncs.com": {
+            "username": "acr_pusher@1938562138124787",
+            "password": "xxxxxxxx"
+        }
+    },
+    "images": {
+        "harbor.myk8s.paas.com:32080/library/nginx": ""
+    }
+}
