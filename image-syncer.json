@@ -1,13 +1,13 @@
 {
     "auth": {
         "registry.hub.docker.com": {
-            "username": "905447797",
-            "password": "xcswswswws90",
+            "username": "xxxxxxxx",
+            "password": "xxxxxxxx",
             "insecure": true
         },
         "registry.cn-hangzhou.aliyuncs.com": {
-            "username": "菲尼克斯测试账号3",
-            "password": "Phoenix123"
+            "username": "xxxxxxxx",
+            "password": "xxxxxxxx"
         }
     },
     "images": {
