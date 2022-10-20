@@ -9,5 +9,5 @@ jobs:
       uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         name: 905447797/image-syncer
-        username: 905447797
-        password: xcswswswws90
+        username: xxxxxxxx
+        password: xxxxxxxx
