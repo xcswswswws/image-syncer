@@ -1,9 +1,8 @@
 FROM golang:1.19.2 as builder
 WORKDIR /go/src/github.com/AliyunContainerService/image-syncer
 COPY ./ ./
-CMD [ "/go/src/github.com/AliyunContainerService/image-syncer/ls" ]
 COPY ./image-syncer.json /etc/image-syncer/image-syncer.json
-CMD ["ls", "-a"]
+RUN ls
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
 
 FROM alpine:latest
