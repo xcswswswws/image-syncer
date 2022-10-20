@@ -5,13 +5,14 @@ COPY ./image-syncer.json /etc/image-syncer/image-syncer.json
 RUN ls
 RUN pwd
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
+RUN ls
 
 FROM alpine:latest
 WORKDIR /bin/
 RUN ls
 COPY --from=builder /go/src/github.com/AliyunContainerService/image-syncer/image-syncer ./
 RUN ls
-COPY --from=builder /go/src/github.com/AliyunContainerService/image-syncer/image-syncer/image-syncer.json ./
+COPY --from=builder /go/src/github.com/AliyunContainerService/image-syncer/image-syncer.json ./
 RUN ls
 RUN cat image-syncer.json
 RUN chmod +x ./image-syncer
