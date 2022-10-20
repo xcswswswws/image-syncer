@@ -10,4 +10,4 @@ RUN chmod +x ./image-syncer
 RUN apk add -U --no-cache ca-certificates && rm -rf /var/cache/apk/* && mkdir -p /etc/ssl/certs \
   && update-ca-certificates --fresh
 ENTRYPOINT ["image-syncer"]
-CMD ["--config", "/go/src/github.com/AliyunContainerService/image-syncer/image-syncer/image-syncer.json","--registry","registry.cn-hangzhou.aliyuncs.com","--namespace","proficloud","--retries","10"]
+CMD ["--config", "./image-syncer.json","--registry","registry.cn-hangzhou.aliyuncs.com","--namespace","proficloud","--retries","10"]
