@@ -6,7 +6,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
 FROM alpine:latest
 WORKDIR /bin/
 COPY --from=builder /go/src/github.com/AliyunContainerService/image-syncer/image-syncer ./
-RUN echo '
+RUN echo '\
 {
     "auth": {
         "registry.hub.docker.com": {
@@ -23,7 +23,7 @@ RUN echo '
         "registry.hub.docker.com/905447797/image-syncer": "",
         "registry.hub.docker.com/905447797/nginx": ""
     }
-}
+}\
 '> /etc/image-syncer/image-syncer.json
 RUN chmod +x ./image-syncer
 RUN apk add -U --no-cache ca-certificates && rm -rf /var/cache/apk/* && mkdir -p /etc/ssl/certs \
