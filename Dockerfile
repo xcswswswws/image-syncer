@@ -6,7 +6,7 @@ RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 make
 FROM alpine:latest
 WORKDIR /bin/
 COPY --from=builder /go/src/github.com/AliyunContainerService/image-syncer/image-syncer ./
-echo "
+RUN echo "
 {
     "auth": {
         "registry.hub.docker.com": {
