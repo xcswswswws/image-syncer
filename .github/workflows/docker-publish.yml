@@ -10,4 +10,5 @@ jobs:
       with:
         name: 905447797/image-syncer
         username: 905447797
-        password: ${{ env.DOCKER_PASSWORD }}
+      env:
+        password: ${{ secrets.DOCKER_PASSWORD }}
