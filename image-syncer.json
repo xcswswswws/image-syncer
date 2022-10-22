@@ -1,13 +1,13 @@
 {
     "auth": {
         "registry.hub.docker.com": {
-            "username": "",
-            "password": "",
+             "username": "${DOCKER_HUB_USER}",
+             "password": "${DOCKER_HUB_PASSWORD}"
             "insecure": true
         },
         "registry.cn-hangzhou.aliyuncs.com": {
-            "username": "",
-            "password": "",
+           "username": "${ACR_USER}",
+           "password": "${ACR_PASSWORD}"
         }
     },
     "images": {
